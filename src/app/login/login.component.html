@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel="stylesheet" src="./login.component.scss">
+    </head>
+    <body>
+        <h1>Simple Login Form</h1>
+        <div class="formContainer">
+        <form #userlogin="ngForm"  (ngSubmit)="onClickSubmit(userlogin)">
+            <label>Name:</label>
+            <input type="text"  [(ngModel)]="model.name"  name="name"><br>
+            <Label>Email:</Label>
+            <input type="email" name="email"  [(ngModel)]="model.email"   placeholder="something@gmail.com"><br>
+            <label>Password:</label>
+            <input type="password" name="password"  [(ngModel)]="model.password"  placeholder="12qwe3!@#4"><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    </body>
+</html>
